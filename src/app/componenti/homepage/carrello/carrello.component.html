@@ -1,0 +1,26 @@
+
+    <a><button id="bckHP"> ⬅️ Torna alla Home Page</button></a>
+    <div class="firstTitle">
+        <h1 id="title">IL TUO CARRELLO</h1>
+    </div>
+    <h2 id="secondTitle">Qui potrai trovare tutti gli articoli da te selezionati</h2>
+
+    <div id="cardsCase">
+        @for (carta of carte; track $index) {
+            <div class="contenitore">
+                <img src="{{carta.img}}" alt="foto carta" class="fotoCarta">
+                <h1 class="cardText">{{carta.nome}}</h1>
+                <select class="cardQuantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <button class="btnCards" onclick="deleteCard()">ELIMINA</button>
+            </div>
+        }
+        
+        </div>
+
