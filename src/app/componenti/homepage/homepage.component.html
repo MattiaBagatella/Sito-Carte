@@ -1,6 +1,7 @@
 
     <nav>
-      <img routerLink="carrello" class="link" id="imgCarrello"  src="assets\immaginiCarrello\carrelloVuoto.jpg" alt="carrello">
+      <img routerLink="carrello" class="link" id="imgCarrello" 
+      [src]="imgCarrello"  alt="carrello">
         @if (switchEcommerce === 'visibili') {<a href="https://www.cardmarket.com/Users/Bagherinho" id="cardmarket" target="_blank"><img class="link" src="https://www.cardmarket.com/img/public/images/user/badge/badge_991683658.jpg" border ="0" alt="Cardmarket - Bagherinho" /></a>}
         @if (switchEcommerce === 'visibili') {<a id="vinted" href="https://www.vinted.it/member/136007224-mattia232003">
                 <img class="link"  src="assets\immaginiCarrello/vinted.jpg" alt="Vinted - Mattia232003">
@@ -35,14 +36,12 @@
              <img src="{{carta.img}}" alt="foto carta" class="fotoCarta"> 
              <p class="prezzi">{{carta.nome}}</p>
              <p class="prezzi">{{carta.prezzo}}</p>
-             <button class="prezzi" (click)="carrelloOn()">Aggiungi al carrello</button>
+             <button class="prezzi" (click)="aggiungiAlCarrello()">Aggiungi al carrello</button>
            </div>
           }
         
         </div>
       </div>
 
-      <div>
-        <button type="button" class="btn btn-primary">Primary</button>
-      </div>
+    
     

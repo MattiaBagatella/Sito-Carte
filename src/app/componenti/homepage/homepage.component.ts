@@ -10,32 +10,26 @@ import { RouterModule } from '@angular/router';
   styleUrl: './homepage.component.css'
 })
 export class HomepageComponent implements OnInit{
-  switchEcommerce = 'nascosti';
-  dispCM : any= document.getElementById('cardmarket');
-  dispVI : any= document.getElementById('vinted');
- refLinkFunction(){
-    this.switchEcommerce = 'visibili' ;
-};
-
-cartImg : any= document.getElementById ('imgCarrello');
-
-carrelloOn (){
-  if (this.cartImg.src.match){
-      this.cartImg.src = 'assets/immaginiCarrello/carrello.jpg';
-  }
-  else{
-      this.cartImg.src = 'assets/immaginiCarrello/carrelloVuoto.jpg';
-  }
-};
-  
+switchEcommerce = 'nascosti';
+imgCarrello: string = 'assets/immaginiCarrello/carrelloVuoto.jpg';
+carte : any= []
 
 constructor(public carteService : ServizioCarteService){}
   
-carte : any= []
 
 ngOnInit(): any {
     this.carte = this.carteService.carte;
-  }
+}
+
+refLinkFunction(){
+  this.switchEcommerce = 'visibili' ;
+};
+
+aggiungiAlCarrello (){
+
+        this.imgCarrello = 'assets/immaginiCarrello/carrello.jpg';
+
+  };
 
 
 
