@@ -1,11 +1,18 @@
 
     <nav>
-      <img routerLink="carrello" class="link" id="imgCarrello" 
-      [src]="imgCarrello"  alt="carrello">
-        @if (switchEcommerce === 'visibili') {<a href="https://www.cardmarket.com/Users/Bagherinho" id="cardmarket" target="_blank"><img class="link" src="https://www.cardmarket.com/img/public/images/user/badge/badge_991683658.jpg" border ="0" alt="Cardmarket - Bagherinho" /></a>}
-        @if (switchEcommerce === 'visibili') {<a id="vinted" href="https://www.vinted.it/member/136007224-mattia232003">
-                <img class="link"  src="assets\immaginiCarrello/vinted.jpg" alt="Vinted - Mattia232003">
-                </a>}
+      <img routerLink="carrello" class="link" id="imgCarrello" [src]="imgCarrello"  alt="carrello">
+
+        @if (switchEcommerce === 'visibili') {
+          <a href="https://www.cardmarket.com/Users/Bagherinho" id="cardmarket" target="_blank">
+            <img class="link" src="../../../assets/immaginiLink/cardmarket.jpg" border ="0" alt="Cardmarket - Bagherinho" />
+          </a>
+        }
+        @if (switchEcommerce === 'visibili') {
+          <a id="vinted" href="https://www.vinted.it/member/136007224-mattia232003">
+            <img class="link"  src="../../../assets/immaginiLink/vinted.jpg" alt="Vinted - Mattia232003">
+          </a>
+        }
+
         <div class="recapito">
             <h1 class="recapito">
                 CONTATTAMI AI LINK: <br>
@@ -22,22 +29,29 @@
             </h1>
         </div>
     </div>
-    <div class="testata">
-        <h2 class="testata">
-            Bevenuto in Yu_Gi_Oh! galaxy_eyes
-        </h2>
-    </div>
 
     <div class="container text-center">
-        <div class="row align-items-start">
+        <div class="row align-items-start align-content-center">
           
           @for (carta of carte; track $index) {
-           <div class="col-2" class="articolo">
-             <img src="{{carta.img}}" alt="foto carta" class="fotoCarta"> 
-             <p class="prezzi">{{carta.nome}}</p>
-             <p class="prezzi">{{carta.prezzo}}</p>
-             <button class="prezzi" (click)="aggiungiAlCarrello()">Aggiungi al carrello</button>
-           </div>
+           <div class="articolo card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{carta.img}}" class="img-carta img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body" style="height: 100%;">
+                  <h5 class="card-title color">{{carta.nome}}</h5>
+                      <p class="card-text color">{{carta.prezzo}} €</p>
+                      <p class="card-text" >
+                        <small class="text-body-secondary">
+                          <button class="prezzi" (click)="aggiungiAlCarrello()">Aggiungi al carrello</button>
+                        </small>
+                      </p>
+                </div>
+              </div>
+            </div>
+          </div>
           }
         
         </div>

@@ -7,9 +7,6 @@
     font-size: 200%;
     color: black;
 }
-#title:hover{
-    background: none;
-}
 #secondTitle{
     background-color: darkslateblue;
     border: 2px solid black;
@@ -17,14 +14,12 @@
     text-align: center;
     color: black;
 }
-#secondTitle:hover{
-    background: none;
-}
 #cardsCase{
     border: 2px solid darkslateblue;
     margin-left: 5%;
     margin-right: 5%;
     border-radius: 5px;
+    min-height: 600px;
 }
 .contenitore{
     height: 130px;
@@ -33,6 +28,7 @@
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 5px;
+    overflow: hidden;
 }
 .fotoCarta{
     float: left;
@@ -51,9 +47,6 @@
     margin-top: 10px;
     display: flex;
 
-}
-.cardText:hover{
-    background: none;
 }
 .cardQuantity{
     margin-left: 20px;

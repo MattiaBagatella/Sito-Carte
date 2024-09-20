@@ -26,9 +26,7 @@ refLinkFunction(){
 };
 
 aggiungiAlCarrello (){
-
         this.imgCarrello = 'assets/immaginiCarrello/carrello.jpg';
-
   };
 
 

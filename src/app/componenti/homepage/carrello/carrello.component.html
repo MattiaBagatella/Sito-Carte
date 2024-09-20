@@ -5,7 +5,8 @@
     </div>
     <h2 id="secondTitle">Qui potrai trovare tutti gli articoli da te selezionati</h2>
 
-    <div id="cardsCase" [style.display]= "displayNone">
+    <div id="cardsCase" >
+        <div [style.display]= "displayNone">
         @for (carta of carte; track $index) {
             <div id="contCarta">
                 <div class="contenitore">
@@ -22,6 +23,7 @@
                 </div>
             </div>
         }
+    </div>
         <div id="finalOptions" class="contenitore">
             <button id="deleteAll" class="togliTutto" (click)="deleteCards()">ELIMINA TUTTO</button>
             <button id="buyAll" class="togliTutto" (click)="deleteCards()">COMPRA</button>
