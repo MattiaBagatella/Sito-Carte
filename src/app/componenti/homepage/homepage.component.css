@@ -5,9 +5,8 @@
     border: 1px solid black;
     border-radius: 5px;
     margin-right: 10px;
+    cursor: pointer;
  }
-
-
 #cardmarket{
     height: 50px;
     width: 50px;
@@ -18,9 +17,6 @@
     width: 50px;
     float: right;
     margin-right: 10px ;
-}
-.hiddenLink{
-    display: none;
 }
 div.recapito{
     background-color: darkslateblue;
@@ -57,20 +53,41 @@ h1.testata{
     zoom: 100%;
     background-color: darkslateblue;
     margin-top: 40px;
-    border: 2px solid black;
+    border: none;
     border-radius: 5px;
     color: black;
+}
+.articolo {
+    background-color: darkslateblue;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2%;
+    max-width: 540px;
+}
+.articolo:hover{
+    box-shadow: 3px 3px 3px 3px;
+    background-color: blueviolet;
+    transform: translateY(-10px);
 }
 .img-carta{
     height: 250px;
     padding: 1%;
 }
-.color{
+.colore{
     color: black;
     font-weight: bold;
     font-size: larger;
 }
-.prezzi{
+.descrizione{
+    height: 30%;
+    overflow-y: scroll;
+    border: none;
+    color: black;
+    scrollbar-width: normal;
+    scrollbar-color: rgb(50, 40, 110) transparent;
+}
+
+.btn-carrello{
     color: black;
     text-align: center;
     font-weight: bold;
@@ -78,23 +95,10 @@ h1.testata{
     background-color: rgb(50, 40, 110);
     border-radius: 3px;
     border: 1px solid black;
-    margin: auto;
-}
- .articolo {
-    background-color: darkslateblue;
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top: 2%;
-}
-div.articolo:hover{
-    box-shadow: 3px 3px 3px 3px;
-    background-color: blueviolet;
-    transform: translateY(-10px);
 }
 button:hover{
-    box-shadow: 1px 1px 1px 1px;
+    box-shadow: 0,5px 0,5px 1px 1px;
     background-color: rgb(55, 12, 95);
-    
 }
 button:active{
     background-color: rgb(32, 24, 83);

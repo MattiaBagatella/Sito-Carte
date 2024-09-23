@@ -14,16 +14,25 @@ export class CarrelloComponent {
   constructor(public carteService : ServizioCarteService){}
 
   cardsCase : any= document.getElementById('cardsCase');
-  carte : any= []
-  displayNone : string ='block'
+  cards : any= [];
+  displayNone : string ='block';
+  displayNoneCard : string = 'block';
+  cartaCliccata : number = 0;
+  cartaEliminata : string = '';
+  
   
   ngOnInit(): any {
-      this.carte = this.carteService.carte;
+      this.cards = this.carteService.carte;
     }
 
     deleteCards(){
       this.displayNone = 'none';
   }
-  
+eliminaCard(indexCarta: number) {
+  this.cards.splice(indexCarta, 1);
+  if (this.cards.length === 0) {
+    this.displayNoneCard = 'none';
+  }
+}
 
 }

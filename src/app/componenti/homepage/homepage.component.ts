@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, SimpleChanges} from '@angular/core';
 import { ServizioCarteService } from '../../service/servizio-carte.service';
 import { RouterModule } from '@angular/router';
 
@@ -13,12 +13,19 @@ export class HomepageComponent implements OnInit{
 switchEcommerce = 'nascosti';
 imgCarrello: string = 'assets/immaginiCarrello/carrelloVuoto.jpg';
 carte : any= []
+cambioDimensione : number = 768;
+dimensioneSchermo : any = window.screen.width;
+maxAltezzaCard : string = '1000px';
+
 
 constructor(public carteService : ServizioCarteService){}
-  
+
 
 ngOnInit(): any {
-    this.carte = this.carteService.carte;
+  this.carte = this.carteService.carte;
+  if(this.dimensioneSchermo > this.cambioDimensione){
+    this.maxAltezzaCard = '270px'
+  }
 }
 
 refLinkFunction(){
@@ -28,7 +35,5 @@ refLinkFunction(){
 aggiungiAlCarrello (){
         this.imgCarrello = 'assets/immaginiCarrello/carrello.jpg';
   };
-
-
 
 }

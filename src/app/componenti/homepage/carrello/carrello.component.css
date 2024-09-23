@@ -15,7 +15,6 @@
     color: black;
 }
 #cardsCase{
-    border: 2px solid darkslateblue;
     margin-left: 5%;
     margin-right: 5%;
     border-radius: 5px;
@@ -28,7 +27,7 @@
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 5px;
-    overflow: hidden;
+    overflow-y: scroll;
 }
 .fotoCarta{
     float: left;
@@ -83,4 +82,7 @@ button.togliTutto{
     margin-top: 30px;
     margin-right: 35px;
     height: 40px;
+}
+.eliminata{
+    display: none;
 }
