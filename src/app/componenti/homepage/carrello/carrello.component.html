@@ -1,42 +1,44 @@
-
+<div class="sfondo" style="min-height: 100vh;">
     <button id="bckHP" routerLink=""> 
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
             <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1"/>
         </svg>
       Torna alla Home Page
     </button>
-    <div class="firstTitle">
-        <h1 id="title">IL TUO CARRELLO</h1>
+    <div class="container titolo">
+        <h1>IL TUO CARRELLO</h1>
+        <hr>
+        <h2>Qui potrai trovare tutti gli articoli da te selezionati</h2>
     </div>
-    <h2 id="secondTitle">Qui potrai trovare tutti gli articoli da te selezionati</h2>
+    
 
-    <div id="cardsCase" >
+    <div class="mt-5 ms-2 me-2" style="min-height: 100vh;border: 1px solid darkslateblue;border-radius: 5px;">
         <div [style.display]= "displayNone">
             @for (carta of cards; track $index) {
-                <div [style.display]= "displayNoneCard">
-                    <div id="contCarta">
-                        <div class="contenitore">
-                            <img src="{{carta.img}}" alt="foto carta" class="fotoCarta">
-                            <h1 class="cardText">{{carta.nome}}</h1>
-                            <select class="cardQuantity">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                            </select>
-                            <button class="btn-primary btn-singola" (click)="eliminaCard($index)">ELIMINA</button>
-                        </div>
+                <div class="d-flex ms-1 mt-2" [style.display]= "displayNoneCard">
+                    <img src="{{carta.img}}" alt="foto carta" class="fotoCarta mt-1 ms-1">
+                    <div class="ms-4 mt-1" style="max-width: 50%;">
+                        <h3 class="card-title" >{{carta.nome}}</h3>
+                        <select class="cardQuantity mt-5">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>                            
+                        <button class="btn-primary ms-2 mb-1" (click)="eliminaCard($index)">
+                            ELIMINA
+                        </button>
                     </div>
                 </div>
+                <hr style="color: darkslateblue;" class="ms-5 me-5">
+                
             }
     </div>
         <div id="finalOptions" class="contenitore" [style.display]="displayNone">
             <button id="deleteAll" class="togliTutto" (click)="deleteCards()">ELIMINA TUTTO</button>
             <button id="buyAll" class="togliTutto" (click)="deleteCards()">COMPRA</button>
         </div>
-    
-        
-        </div>
-
+    </div>
+</div>

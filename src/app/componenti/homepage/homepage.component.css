@@ -1,67 +1,24 @@
+.sfondo{
+    background-color: rgb(223, 220, 240);
+}
 .link{
     height: 50px;
     width: 50px;
-    float: right;
+    float: right !important;
     border: 1px solid black;
     border-radius: 5px;
-    margin-right: 10px;
     cursor: pointer;
  }
 #cardmarket{
     height: 50px;
     width: 50px;
-    float: right;
 }
 #vinted{
     height: 50px;
     width: 50px;
-    float: right;
-    margin-right: 10px ;
-}
-div.recapito{
-    background-color: darkslateblue;
-    position: sticky;
-    top: 0px;
-    margin-right: 75%;
-    height: 75px;
-    border: 2px solid black;
-    border-radius: 5px;
- }
- h1.recapito{
-    text-align: center;
-    font-size: 100%;
-    zoom: 100%;
-    color: black;
-}
-button#referalLink{
-    margin-top: 3%;
-    background-color: rgb(12, 115, 240);
-    border-radius: 5px;
-    font-weight: bold;
-}
-div.testata {
-    margin-left: 20%;
-    margin-right: 20%;
-    height: 200%;
-} 
-div.firstTitle{
-    background-color: darkslateblue;
-}
-
-h1.testata{ 
-    text-align: center; 
-    zoom: 100%;
-    background-color: darkslateblue;
-    margin-top: 40px;
-    border: none;
-    border-radius: 5px;
-    color: black;
 }
 .articolo {
     background-color: darkslateblue;
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top: 2%;
     max-width: 540px;
 }
 .articolo:hover{

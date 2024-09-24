@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
   styleUrl: './homepage.component.css'
 })
 export class HomepageComponent implements OnInit{
-switchEcommerce = 'nascosti';
 imgCarrello: string = 'assets/immaginiCarrello/carrelloVuoto.jpg';
 carte : any= []
 cambioDimensione : number = 768;
@@ -24,13 +23,9 @@ constructor(public carteService : ServizioCarteService){}
 ngOnInit(): any {
   this.carte = this.carteService.carte;
   if(this.dimensioneSchermo > this.cambioDimensione){
-    this.maxAltezzaCard = '270px'
+    this.maxAltezzaCard = '270px';
   }
 }
-
-refLinkFunction(){
-  this.switchEcommerce = 'visibili' ;
-};
 
 aggiungiAlCarrello (){
         this.imgCarrello = 'assets/immaginiCarrello/carrello.jpg';

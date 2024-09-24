@@ -1,51 +1,16 @@
-#title{
+.sfondo{
+    background-color: rgb(223, 220, 240);
+}
+.titolo{
     text-align: center; 
     background-color: darkslateblue;
     margin-top: 40px;
-    border: 2px solid black;
     border-radius: 5px;
     font-size: 200%;
     color: black;
 }
-#secondTitle{
-    background-color: darkslateblue;
-    border: 2px solid black;
-    border-radius: 5px;
-    text-align: center;
-    color: black;
-}
-#cardsCase{
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 5px;
-    min-height: 600px;
-}
-.contenitore{
-    height: 130px;
-    margin-top: 10px;
-    border: 2px solid darkslateblue;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 5px;
-    overflow-y: scroll;
-}
 .fotoCarta{
-    float: left;
     height: 120px;
-    margin-top: 5px;
-    margin-left: 5px;
-}
-.cardText{
-    color: black;
-    background-color: darkslateblue;
-    margin-left: 10%;
-    margin-right: 5%;
-    margin-left: auto;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: flex;
-
 }
 .cardQuantity{
     margin-left: 20px;
@@ -82,7 +47,4 @@ button.togliTutto{
     margin-top: 30px;
     margin-right: 35px;
     height: 40px;
-}
-.eliminata{
-    display: none;
 }

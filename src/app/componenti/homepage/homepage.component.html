@@ -1,41 +1,32 @@
-
-    <nav>
-      <!-- float link recapiti -->
-      <img routerLink="carrello" class="link" id="imgCarrello" [src]="imgCarrello"  alt="carrello">
-        @if (switchEcommerce === 'visibili') {
-          <a href="https://www.cardmarket.com/Users/Bagherinho" id="cardmarket" target="_blank">
-            <img class="link" src="../../../assets/immaginiLink/cardmarket.jpg" border ="0" alt="Cardmarket - Bagherinho" />
+<div class="sfondo" style="min-height: 100vh; height: max-content;">
+    <nav class="navbar d-flex" style="background-color: darkslateblue;">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center bg-white rounded">
+          <img src="../../../assets/logo.jpg" alt="Logo" class="me-2" style="height: 50px; width: auto;">
+          <h1 style="height: 50px; line-height: 50px;">GALAXY EYES</h1>
+        </div>
+        <div class="d-flex justify-content-end align-items-center">
+          <img routerLink="carrello" class="link me-2" id="imgCarrello" [src]="imgCarrello" alt="carrello">
+          <a href="https://www.cardmarket.com/Users/Bagherinho" id="cardmarket" target="_blank" class="me-2">
+            <img class="link" src="../../../assets/immaginiLink/cardmarket.jpg" border="0" alt="Cardmarket - Bagherinho">
           </a>
-        }
-        @if (switchEcommerce === 'visibili') {
           <a id="vinted" href="https://www.vinted.it/member/136007224-mattia232003">
             <img class="link"  src="../../../assets/immaginiLink/vinted.jpg" alt="Vinted - Mattia232003">
           </a>
-        }
-
-        <div class="recapito">
-            <h1 class="recapito">
-                I NOSTRI LINK: <br>
-                <button (click)="refLinkFunction()" id="referalLink">Clicca qui!</button>
-            </h1>
         </div>
-      </nav>
-
-      <div class="testata">
-        <div id="firstTitle">
-            <h1 class="testata">
-            
-             YU-GI-OH! GALAXY_EYES
-            </h1>
-        </div>
+      </div>
+    </nav>  
+     
+    <div class="container text-center mt-4">
+      <h1 class="testata" style="font-size: 3rem; text-align: center;">Carte Disponibili</h1>
     </div>
 
+    
     <div class="container text-center">
-        <div class="row align-items-start align-content-center">
-          
+      <div class="row align-items-start align-content-center">    
           <!-- ciclo per inserire cards -->
           @for (carta of carte; track $index) {
-           <div class="articolo card mb-3" [style.max-height]="maxAltezzaCard ">
+           <div class="articolo card ms-2 mt-4" [style.max-height]="maxAltezzaCard">
             <div class="row g-0">
               <div class="col-md-4">
                 <img src="{{carta.img}}" class="img-carta img-fluid rounded-start" alt="...">
@@ -65,6 +56,6 @@
         
         </div>
       </div>
-
-    
+    </div>
+     
     
